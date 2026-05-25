@@ -8,6 +8,7 @@ import { StatCard } from "./StatCard";
 import { Badge } from "./Badge";
 import { SkeletonStatCard } from "./Skeleton";
 import { VerticalBar } from "./VerticalBar";
+import { tokens } from "../tokens";
 
 export function FeatureSection() {
   const { data: metrics, isLoading, isError } = useMetrics();
@@ -32,6 +33,10 @@ export function FeatureSection() {
     <section
       className="feature-section"
       aria-label="Cloud optimization analytics"
+      style={{
+        paddingBlock: tokens.spacing.xxl,
+        gap: tokens.spacing.xl,
+      }}
     >
       <div className="feature-section__grid" aria-hidden="true" />
 

@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { CountUp } from "./CountUp";
+import { tokens } from "../tokens";
 
 interface StatCardProps {
   label: string;
@@ -35,7 +36,12 @@ export function StatCard({
         delay: index * 0.12,
         ease: [0.22, 1, 0.36, 1],
       }}
-      whileHover={{ y: -4, transition: { duration: 0.2 } }}
+      style={{ borderRadius: tokens.radius.md }}
+      whileHover={{
+        y: -4,
+        boxShadow: `0 12px 24px ${tokens.colors.accentGlow}`,
+        borderColor: tokens.colors.borderActive,
+      }}
     >
       <div className="stat-card__label">{label}</div>
       <div className="stat-card__value">

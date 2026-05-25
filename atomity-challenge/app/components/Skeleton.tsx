@@ -2,7 +2,7 @@
 
 export function SkeletonBar() {
   return (
-    <div className="skeleton-bar">
+    <div className="skeleton-bar" aria-hidden="true">
       <div className="skeleton-bar__label">
         <div className="skeleton skeleton--label" />
         <div className="skeleton skeleton--badge" />
