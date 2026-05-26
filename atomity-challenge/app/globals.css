@@ -233,6 +233,10 @@ select {
   transform: translateY(-2px);
 }
 
+.stat-card--skeleton {
+  min-height: 150px;
+}
+
 .stat-card--highlight {
   background:
     radial-gradient(

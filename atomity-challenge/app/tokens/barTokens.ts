@@ -5,13 +5,13 @@ export const barTokens = {
     high: "high",
     mid: "mid",
     low: "low",
-    lower: "lower",
+    critical: "critical",
   },
 
   color: {
     high: tokens.colors.accentSuccess,
     mid: tokens.colors.accentPrimary,
     low: tokens.colors.accentWarning,
-    lower: tokens.colors.accentError,
+    critical: tokens.colors.accentError,
   },
 } as const;
