@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import type { MetricItem } from "../hooks/useMetrics";
 import { useMediaQuery } from "../hooks/useMediaQuery";
-import { tokens } from "../tokens";
+import { barTokens } from "../tokens/barTokens";
 
 interface Props {
   item: MetricItem;
@@ -14,15 +14,8 @@ function getLevel(pct: number) {
   if (pct >= 75) return "high";
   if (pct >= 55) return "mid";
   if (pct >= 30) return "low";
-  return "lower";
+  return "critical";
 }
-
-const LEVEL_MAP = {
-  high: tokens.colors.accentSuccess,
-  mid: tokens.colors.accentPrimary,
-  low: tokens.colors.accentWarning,
-  lower: tokens.colors.accentError,
-};
 
 export function VerticalBar({ item, index }: Props) {
   const isMobile = useMediaQuery("(max-width: 640px)");
@@ -46,7 +39,7 @@ export function VerticalBar({ item, index }: Props) {
       <div className="vertical-bar__wrapper">
         <motion.div
           className={`vertical-bar__fill`}
-          style={{ backgroundColor: LEVEL_MAP[level] }}
+          style={{ backgroundColor: barTokens.color[level] }}
           initial={isMobile ? { width: 0 } : { height: 0 }}
           whileInView={
             isMobile

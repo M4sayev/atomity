@@ -6,7 +6,7 @@ import { motion, useInView } from "framer-motion";
 import { useMetrics } from "../hooks/useMetrics";
 import { StatCard } from "./StatCard";
 import { Badge } from "./Badge";
-import { SkeletonStatCard } from "./Skeleton";
+import { SkeletonStatCard, VerticalBarSkeleton } from "./Skeleton";
 import { VerticalBar } from "./VerticalBar";
 import { tokens } from "../tokens";
 
@@ -116,7 +116,7 @@ export function FeatureSection() {
           {isLoading ? (
             <div className="chart-grid chart-grid--loading">
               {Array.from({ length: 6 }).map((_, i) => (
-                <div key={i} className="vertical-bar-skeleton" />
+                <VerticalBarSkeleton key={i} />
               ))}
             </div>
           ) : isError ? (

@@ -1,23 +1,15 @@
 "use client";
-
-export function SkeletonBar() {
+export function VerticalBarSkeleton() {
   return (
-    <div className="skeleton-bar" aria-hidden="true">
-      <div className="skeleton-bar__label">
-        <div className="skeleton skeleton--label" />
+    <div className="vertical-bar" aria-hidden="true">
+      <div className="vertical-bar__top">
         <div className="skeleton skeleton--badge" />
       </div>
-      <div className="skeleton-bar__tracks">
-        <div className="skeleton-bar__track">
-          <div className="skeleton skeleton--track-label" />
-          <div className="skeleton skeleton--track" />
-          <div className="skeleton skeleton--value" />
-        </div>
-        <div className="skeleton-bar__track">
-          <div className="skeleton skeleton--track-label" />
-          <div className="skeleton skeleton--track skeleton--track-short" />
-          <div className="skeleton skeleton--value" />
-        </div>
+      <div className="vertical-bar__wrapper">
+        <div className="vertical-bar-skeleton-fill" />
+      </div>
+      <div className="vertical-bar__label">
+        <div className="skeleton skeleton--label" />
       </div>
     </div>
   );

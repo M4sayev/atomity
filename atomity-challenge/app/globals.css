@@ -382,11 +382,10 @@ select {
 
 /* SKELETON */
 
-.vertical-bar-skeleton {
-  flex: 1;
-  max-inline-size: 90px;
-  block-size: 340px;
-  border-radius: 30px;
+.vertical-bar-skeleton-fill {
+  inline-size: 100%;
+  block-size: 100%;
+  border-radius: 20px;
   background: linear-gradient(
     90deg,
     rgba(255, 255, 255, 0.04) 25%,
